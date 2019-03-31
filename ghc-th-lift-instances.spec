@@ -4,7 +4,7 @@
 %global pkg_name th-lift-instances
 %global pkgver %{pkg_name}-%{version}
 
-%bcond_without tests
+%bcond_with tests
 
 Name:           ghc-%{pkg_name}
 Version:        0.1.11
@@ -93,6 +93,9 @@ files.
 
 
 %changelog
+* Sun Mar 31 2019 Jens Petersen <petersen@redhat.com> - 0.1.11-13
+- disable tests
+
 * Sun Mar 10 2019 Jens Petersen <petersen@redhat.com> - 0.1.11-13
 - bump over hledger
 
