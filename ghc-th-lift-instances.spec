@@ -7,8 +7,8 @@
 %bcond_with tests
 
 Name:           ghc-%{pkg_name}
-Version:        0.1.12
-Release:        2%{?dist}
+Version:        0.1.14
+Release:        1%{?dist}
 Summary:        Lift instances for template-haskell for common data types
 
 License:        BSD
@@ -25,6 +25,8 @@ BuildRequires:  ghc-bytestring-prof
 BuildRequires:  ghc-containers-prof
 BuildRequires:  ghc-template-haskell-prof
 BuildRequires:  ghc-text-prof
+BuildRequires:  ghc-th-lift-prof
+BuildRequires:  ghc-transformers-prof
 BuildRequires:  ghc-vector-prof
 %if %{with tests}
 BuildRequires:  ghc-QuickCheck-devel
@@ -34,6 +36,14 @@ BuildRequires:  ghc-QuickCheck-devel
 %description
 Most data types in haskell platform do not have Lift instances. This package
 provides orphan instances for containers, text, bytestring and vector.
+It also acts as a compat instances, definining instances not existing in
+'template-haskell'
+
+Note that <https://hackage.haskell.org/package/th-lift th-lift> package
+provides Template Haskell based derivation of 'Lift' instances (when you cannot
+use 'DeriveLift' extension), and
+<https://hackage.haskell.org/package/th-orphans th-orphans> package provides
+instances for TH datatypes.
 
 
 %package devel
@@ -125,6 +135,9 @@ This package provides the Haskell %{pkg_name} profiling library.
 
 
 %changelog
+* Fri Feb 14 2020 Jens Petersen <petersen@redhat.com> - 0.1.14-1
+- update to 0.1.14
+
 * Tue Jan 28 2020 Fedora Release Engineering <releng@fedoraproject.org> - 0.1.12-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
 
