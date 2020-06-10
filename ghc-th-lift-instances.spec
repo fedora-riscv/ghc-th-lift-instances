@@ -7,7 +7,7 @@
 %bcond_with tests
 
 Name:           ghc-%{pkg_name}
-Version:        0.1.14
+Version:        0.1.16
 Release:        1%{?dist}
 Summary:        Lift instances for template-haskell for common data types
 
@@ -34,9 +34,9 @@ BuildRequires:  ghc-QuickCheck-devel
 # End cabal-rpm deps
 
 %description
-Most data types in haskell platform do not have Lift instances. This package
-provides orphan instances for containers, text, bytestring and vector.
-It also acts as a compat instances, definining instances not existing in
+Most data types in the haskell platform do not have Lift instances.
+This package provides orphan instances for containers, text, bytestring and
+vector. It also provides compat instances for older versions of
 'template-haskell'
 
 Note that <https://hackage.haskell.org/package/th-lift th-lift> package
@@ -135,6 +135,9 @@ This package provides the Haskell %{pkg_name} profiling library.
 
 
 %changelog
+* Wed Jun 10 2020 Jens Petersen <petersen@redhat.com> - 0.1.16-1
+- update to 0.1.16
+
 * Fri Feb 14 2020 Jens Petersen <petersen@redhat.com> - 0.1.14-1
 - update to 0.1.14
 
