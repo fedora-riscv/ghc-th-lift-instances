@@ -4,10 +4,10 @@
 %global pkg_name th-lift-instances
 %global pkgver %{pkg_name}-%{version}
 
-%bcond_with tests
+%bcond_without tests
 
 Name:           ghc-%{pkg_name}
-Version:        0.1.16
+Version:        0.1.17
 Release:        1%{?dist}
 Summary:        Lift instances for template-haskell for common data types
 
@@ -84,6 +84,7 @@ This package provides the Haskell %{pkg_name} profiling library.
 %prep
 # Begin cabal-rpm setup:
 %setup -q -n %{pkgver}
+chmod a-x README.md
 # End cabal-rpm setup
 
 
@@ -125,6 +126,9 @@ This package provides the Haskell %{pkg_name} profiling library.
 
 
 %changelog
+* Sat Jun 20 2020 Jens Petersen <petersen@redhat.com> - 0.1.17-1
+- update to 0.1.17
+
 * Wed Jun 10 2020 Jens Petersen <petersen@redhat.com> - 0.1.16-1
 - update to 0.1.16
 
