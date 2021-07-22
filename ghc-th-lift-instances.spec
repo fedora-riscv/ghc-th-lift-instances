@@ -8,7 +8,7 @@
 
 Name:           ghc-%{pkg_name}
 Version:        0.1.17
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        Lift instances for template-haskell for common data types
 
 License:        BSD
@@ -126,6 +126,9 @@ chmod a-x README.md
 
 
 %changelog
+* Thu Jul 22 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.1.17-5
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
+
 * Tue Jan 26 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.1.17-4
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
 
