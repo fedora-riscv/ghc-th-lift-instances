@@ -7,8 +7,8 @@
 %bcond_without tests
 
 Name:           ghc-%{pkg_name}
-Version:        0.1.18
-Release:        2%{?dist}
+Version:        0.1.19
+Release:        1%{?dist}
 Summary:        Lift instances for template-haskell for common data types
 
 License:        BSD
@@ -128,6 +128,9 @@ This package provides the Haskell %{pkg_name} profiling library.
 
 
 %changelog
+* Tue Jun 07 2022 Jens Petersen <petersen@redhat.com> - 0.1.19-1
+- https://hackage.haskell.org/package/th-lift-instances-0.1.19/changelog
+
 * Thu Jan 20 2022 Fedora Release Engineering <releng@fedoraproject.org> - 0.1.18-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_36_Mass_Rebuild
 
