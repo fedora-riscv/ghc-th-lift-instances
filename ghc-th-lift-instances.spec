@@ -4,11 +4,13 @@
 %global pkg_name th-lift-instances
 %global pkgver %{pkg_name}-%{version}
 
+%ifnarch riscv64
 %bcond_without tests
+%endif
 
 Name:           ghc-%{pkg_name}
 Version:        0.1.20
-Release:        %autorelease
+Release:        %autorelease -e 0.rv64
 Summary:        Lift instances for template-haskell for common data types
 
 License:        BSD-3-Clause
